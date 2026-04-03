@@ -1,4 +1,20 @@
 ﻿document.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('.site-header');
+  const mobileMedia = window.matchMedia('(max-width: 720px)');
+
+  const syncHeaderState = () => {
+    if (!header) {
+      return;
+    }
+
+    const shouldCondense = mobileMedia.matches && window.scrollY > 12;
+    header.classList.toggle('is-condensed', shouldCondense);
+  };
+
+  syncHeaderState();
+  window.addEventListener('scroll', syncHeaderState, { passive: true });
+  mobileMedia.addEventListener('change', syncHeaderState);
+
   const form = document.getElementById('request-form');
   const status = document.getElementById('form-status');
 
@@ -62,3 +78,4 @@
     }
   });
 });
+

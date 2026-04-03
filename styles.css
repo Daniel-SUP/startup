@@ -564,11 +564,23 @@ th {
     top: 10px;
     gap: 16px;
     border-radius: 24px;
+    transition: padding 0.25s ease, gap 0.25s ease, transform 0.25s ease, background 0.25s ease;
+  }
+
+  .site-header.is-condensed {
+    gap: 10px;
+    padding: 14px 14px;
+    background: rgba(255, 255, 255, 0.44);
   }
 
   .brand {
     align-items: flex-start;
     gap: 12px;
+    transition: gap 0.25s ease;
+  }
+
+  .site-header.is-condensed .brand {
+    gap: 10px;
   }
 
   .brand-mark {
@@ -647,3 +659,75 @@ th {
 
 
 
+
+
+
+@media (max-width: 720px) {
+  .site-header {
+    transition: padding 0.28s ease, gap 0.28s ease, background 0.28s ease, box-shadow 0.28s ease;
+  }
+
+  .site-header.is-condensed {
+    gap: 8px;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.52);
+    box-shadow: 0 12px 30px rgba(37, 34, 25, 0.12);
+  }
+
+  .brand {
+    transition: gap 0.28s ease;
+  }
+
+  .site-header.is-condensed .brand {
+    gap: 8px;
+  }
+
+  .brand-mark {
+    transition: width 0.28s ease, height 0.28s ease, border-radius 0.28s ease, font-size 0.28s ease;
+  }
+
+  .site-header.is-condensed .brand-mark {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 0.62rem;
+  }
+
+  .brand-name {
+    transition: font-size 0.28s ease;
+  }
+
+  .site-header.is-condensed .brand-name {
+    font-size: 0.8rem;
+  }
+
+  .brand-tagline {
+    max-height: 48px;
+    overflow: hidden;
+    transition: max-height 0.28s ease, opacity 0.28s ease;
+  }
+
+  .site-header.is-condensed .brand-tagline {
+    max-height: 0;
+    opacity: 0;
+  }
+
+  .site-nav {
+    transition: gap 0.28s ease;
+  }
+
+  .site-header.is-condensed .site-nav {
+    gap: 6px;
+  }
+
+  .site-nav a {
+    transition: min-height 0.28s ease, padding 0.28s ease, font-size 0.28s ease, background 0.28s ease;
+  }
+
+  .site-header.is-condensed .site-nav a {
+    min-height: 30px;
+    padding: 0 8px;
+    font-size: 0.78rem;
+    background: rgba(255, 250, 241, 0.42);
+  }
+}
