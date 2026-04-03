@@ -49,7 +49,11 @@
       setStatus('Заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.', 'is-success');
     } catch (error) {
       console.error('EmailJS error:', error);
-      setStatus('Не удалось отправить заявку. Проверьте ключи EmailJS и настройки шаблона.', 'is-error');
+      const details = error?.text || error?.message || '';
+      const message = details
+        ? `Не удалось отправить заявку: ${details}`
+        : 'Не удалось отправить заявку. Проверьте ключи EmailJS и настройки шаблона.';
+      setStatus(message, 'is-error');
     } finally {
       if (submitButton) {
         submitButton.disabled = false;
