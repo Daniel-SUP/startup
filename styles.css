@@ -347,7 +347,8 @@ th {
 }
 
 .accent-card {
-  background: linear-gradient(135deg, #f0b37e, #f7ddbf);
+  background: linear-gradient(135deg,  rgba(21, 51, 44, 0.96), rgba(49, 122, 84, 0.88));
+  color: var(--bg);
 }
 
 .benefits-list,
@@ -530,7 +531,7 @@ th {
   }
 
   .site-header {
-    position: static;
+    top: 10px;
     gap: 16px;
     border-radius: 24px;
   }
@@ -613,3 +614,4 @@ th {
     grid-template-columns: 1fr;
   }
 }
+
