@@ -431,7 +431,9 @@ th {
 }
 
 .roadmap-result {
-  
+
+  padding: 24px;
+
   background: linear-gradient(180deg, rgba(49, 122, 84, 0.14), rgba(201, 108, 46, 0.12));
 }
 
