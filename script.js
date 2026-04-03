@@ -1,0 +1,60 @@
+﻿document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('request-form');
+  const status = document.getElementById('form-status');
+
+  if (!form || !window.emailjs) {
+    return;
+  }
+
+  const serviceId = form.dataset.serviceId;
+  const templateId = form.dataset.templateId;
+  const publicKey = form.dataset.publicKey;
+
+  const setStatus = (message, type = '') => {
+    if (!status) {
+      return;
+    }
+
+    status.textContent = message;
+    status.className = `form-status ${type}`.trim();
+  };
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    if (!form.reportValidity()) {
+      return;
+    }
+
+    if (!serviceId || !templateId || !publicKey || serviceId === 'YOUR_SERVICE_ID' || templateId === 'YOUR_TEMPLATE_ID' || publicKey === 'YOUR_PUBLIC_KEY') {
+      setStatus('Укажите YOUR_SERVICE_ID, YOUR_TEMPLATE_ID и YOUR_PUBLIC_KEY в index.html, чтобы включить отправку.', 'is-error');
+      return;
+    }
+
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    try {
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Отправка...';
+      }
+
+      setStatus('Отправляем заявку...', 'is-pending');
+
+      await emailjs.sendForm(serviceId, templateId, form, {
+        publicKey,
+      });
+
+      form.reset();
+      setStatus('Заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.', 'is-success');
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      setStatus('Не удалось отправить заявку. Проверьте ключи EmailJS и настройки шаблона.', 'is-error');
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Отправить';
+      }
+    }
+  });
+});

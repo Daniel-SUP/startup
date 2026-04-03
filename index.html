@@ -209,19 +209,28 @@
 
 
       </div>
-      <form class="contact-form" id="request-form">
+      <form class="contact-form" id="request-form" data-service-id="service_kc2zohm" data-template-id="template_faua8zl" data-public-key="sLr7wFYoZ1jecp5AJ">
         <label>
           Имя
-          <input type="text" name="name" placeholder="Ваше имя">
+          <input type="text" name="name" placeholder="Ваше имя" required>
         </label>
 
         <label>
           Телефон / Email
-          <input type="text" name="contact" placeholder="+375... или email">
+          <input type="text" name="contact" placeholder="+375... или email" required>
         </label>
         <button class="button button-primary" type="submit">Отправить</button>
+        <p class="form-hint">Форма отправляет заявку через EmailJS без отдельного сервера.</p>
+        <p class="form-status" id="form-status" aria-live="polite"></p>
       </form>
     </footer>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
