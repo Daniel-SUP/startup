@@ -1,6 +1,41 @@
 ﻿document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.site-header');
   const mobileMedia = window.matchMedia('(max-width: 720px)');
+  const revealTargets = document.querySelectorAll(
+    '.section, .site-footer, .info-card, .feature-card, .benefit-item, .example-card, .team-card, .pricing-card, .hero-panel'
+  );
+
+  revealTargets.forEach((element, index) => {
+    element.classList.add('reveal-on-scroll');
+    element.style.transitionDelay = `${Math.min(index * 0.06, 0.36)}s`;
+  });
+
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        });
+      },
+      {
+        threshold: 0.16,
+        rootMargin: '0px 0px -40px 0px',
+      }
+    );
+
+    revealTargets.forEach((element) => {
+      revealObserver.observe(element);
+    });
+  } else {
+    revealTargets.forEach((element) => {
+      element.classList.add('is-visible');
+    });
+  }
 
   const syncHeaderState = () => {
     if (!header) {
@@ -78,4 +113,3 @@
     }
   });
 });
-
