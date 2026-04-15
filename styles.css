@@ -238,6 +238,7 @@ h1 {
   font-size: clamp(2.7rem, 5vw, 4.8rem);
   max-width: 11ch;
   margin-top: 22px;
+  overflow-wrap: anywhere;
 }
 
 .hero-text {

@@ -170,7 +170,7 @@
         '.site-nav a:nth-of-type(3)': 'Pricing',
         '.site-nav a:nth-of-type(4)': 'Contacts',
         '.hero .eyebrow': 'Blockchain + IoT for agrologistics',
-        '.hero h1': 'Blockchain technology for animal transportation',
+        '.hero h1': 'Blockchain for animal transport',
         '.hero-text': 'A digital platform with smart contracts and IoT sensors. Transparent. Safe. Automatic.',
         '.hero-actions .button-primary': 'Request a demo',
         '.hero-actions .button-secondary': 'Learn more',
