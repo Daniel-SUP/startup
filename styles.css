@@ -814,10 +814,11 @@ th {
   }
 
   .site-header.is-condensed .locale-toggle {
-    min-height: 44px;
-    width: 44px;
+    top: 8px;
+    min-height: 36px;
+    width: 36px;
     padding: 0;
-    font-size: 0.72rem;
+    font-size: 0.64rem;
   }
 }
 
