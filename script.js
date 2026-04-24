@@ -234,7 +234,7 @@
         'main > section:nth-of-type(7) .team-card:nth-of-type(6) p': 'Coach consultant',
         '.footer-copy .eyebrow': 'Contacts',
         '.footer-copy h2': 'Leave a request for a pilot launch',
-        '.footer-copy p:nth-of-type(2)': 'Email:  l0002422@g.bstu.by',
+        '.footer-copy p:nth-of-type(2)': 'Email:  dogchain.pet@gmail.com',
         '.footer-copy p:nth-of-type(3)': 'Phone:  +375297808374',
         '.footer-copy p:nth-of-type(4) a': 'Download the startup document',
       },
