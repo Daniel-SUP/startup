@@ -54,6 +54,10 @@
   const form = document.getElementById('request-form');
   const status = document.getElementById('form-status');
   const submitButton = form?.querySelector('button[type="submit"]') || null;
+  const emailLine = document.querySelector('.footer-copy p:nth-of-type(2)');
+  const phoneLine = document.querySelector('.footer-copy p:nth-of-type(3)');
+  const emailLink = emailLine?.querySelector('a') || null;
+  const phoneLink = phoneLine?.querySelector('a') || null;
   const labelNodes = {
     name: form?.querySelector('label:nth-of-type(1)'),
     contact: form?.querySelector('label:nth-of-type(2)'),
@@ -158,6 +162,12 @@
   const originalLabels = {
     name: labelNodes.name?.childNodes[0]?.textContent || '',
     contact: labelNodes.contact?.childNodes[0]?.textContent || '',
+  };
+  const originalContacts = {
+    emailText: emailLink?.textContent?.trim() || '',
+    emailHref: emailLink?.getAttribute('href') || '',
+    phoneText: phoneLink?.textContent?.trim() || '',
+    phoneHref: phoneLink?.getAttribute('href') || '',
   };
 
   const translations = {
@@ -275,8 +285,6 @@
     const localeText = isEnglish ? translations.en.text : null;
     const localePlaceholders = isEnglish ? translations.en.placeholders : null;
     const localeLabels = isEnglish ? translations.en.labels : null;
-    const emailLine = document.querySelector('.footer-copy p:nth-of-type(2)');
-    const phoneLine = document.querySelector('.footer-copy p:nth-of-type(3)');
 
     textSelectors.forEach((selector) => {
       const element = selector === 'title' ? document.querySelector('title') : document.querySelector(selector);
@@ -313,14 +321,14 @@
 
     if (emailLine) {
       emailLine.innerHTML = isEnglish
-        ? 'Email: <a href="mailto:l0002422@g.bstu.by"> l0002422@g.bstu.by</a>'
-        : 'Email: <a href="mailto:l0002422@g.bstu.by"> l0002422@g.bstu.by</a>';
+        ? `Email: <a href="${originalContacts.emailHref}"> ${originalContacts.emailText}</a>`
+        : `Email: <a href="${originalContacts.emailHref}"> ${originalContacts.emailText}</a>`;
     }
 
     if (phoneLine) {
       phoneLine.innerHTML = isEnglish
-        ? 'Phone: <a href="tel:+375297808374"> +375297808374</a>'
-        : 'Телефон: <a href="tel:+375297808374"> +375297808374</a>';
+        ? `Phone: <a href="${originalContacts.phoneHref}"> ${originalContacts.phoneText}</a>`
+        : `Телефон: <a href="${originalContacts.phoneHref}"> ${originalContacts.phoneText}</a>`;
     }
 
     document.documentElement.lang = isEnglish ? translations.en.htmlLang : 'ru';
