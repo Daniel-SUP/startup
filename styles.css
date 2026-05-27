@@ -186,13 +186,6 @@ a {
 }
 
 .reveal-on-scroll {
-  opacity: 0;
-  transform: translateY(36px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-  will-change: opacity, transform;
-}
-
-.reveal-on-scroll.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
