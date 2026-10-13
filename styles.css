@@ -1,14 +1,14 @@
 ﻿:root {
   --bg: #f5efe4;
-  --bg-soft: rgba(255, 255, 255, 0.3);
-  --surface: rgba(255, 250, 241, 0.72);
-  --surface-strong: #15332c;
+  --bg-soft: rgba(255, 255, 255, 0.297); 
+  --surface: rgba(193, 190, 186, 0.877);
+  --surface-strong: #331515;
   --text: #1f2a23;
   --muted: #5f6d64;
   --line: rgba(31, 42, 35, 0.12);
-  --accent: #c96c2e;
+  --accent: #900000;
   --accent-soft: #f0b37e;
-  --success: #317a54;
+  --success: #7a3131;
   --shadow: 0 20px 60px rgba(37, 34, 25, 0.12);
   --radius-xl: 28px;
   --radius-lg: 20px;
@@ -84,7 +84,7 @@ a {
   place-items: center;
   border-radius: 16px;
   background: linear-gradient(135deg, var(--accent), #8b3e18);
-  color: white;
+  color: rgb(173, 167, 167);
   font-family: "Unbounded", sans-serif;
   font-size: 0.9rem;
 }
@@ -203,7 +203,7 @@ a {
   gap: 8px;
   padding: 8px 14px;
   border-radius: 999px;
-  background: rgba(255, 250, 241, 0.75);
+  background: rgba(193, 190, 186, 0.877);
   color: var(--success);
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -275,7 +275,7 @@ h1 {
   padding: 24px;
   border-radius: var(--radius-xl);
   background:
-    linear-gradient(160deg, rgba(21, 51, 44, 0.96), rgba(49, 122, 84, 0.88)),
+    linear-gradient(160deg, rgba(51, 21, 21, 0.96), rgba(122, 49, 49, 0.88)),
     linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent);
   color: #f5efe4;
 }
@@ -404,7 +404,7 @@ th {
 }
 
 .accent-card {
-  background: linear-gradient(135deg,  rgba(21, 51, 44, 0.96), rgba(49, 122, 84, 0.88));
+  background: linear-gradient(135deg,  rgba(51, 21, 21, 0.96), rgba(122, 49, 49, 0.88));
   color: var(--bg);
 }
 
