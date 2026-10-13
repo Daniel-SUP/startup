@@ -260,7 +260,7 @@
         'main > section:nth-of-type(7) .benefit-item:nth-of-type(5) p': 'Year 3: 250+ thousand BYN revenue.',
         'main > section:nth-of-type(7) .benefit-item:nth-of-type(6) p': 'Payback period — 14 months.',
         'main > section:nth-of-type(7) .benefit-item:nth-of-type(7) p': '208-268% over 2 years.',
-        'main > section:nth-of-type(7) .benefit-item:nth-of-type(8) p': 'Smart contract audit — separately, from 15,000 BYN, is funded from the pilot`s revenue.. ',
+        'main > section:nth-of-type(7) .benefit-item:nth-of-type(8) p': 'Smart contract audit — separately, from 15,000 BYN, is funded from the pilot`s revenue.',
         '.footer-copy .eyebrow': 'Contacts',
         '.footer-copy h2': 'Leave a request for a pilot launch',
         '.footer-copy p:nth-of-type(2)': 'Email:  dogchain.pet@gmail.com',
