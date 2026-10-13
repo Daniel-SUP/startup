@@ -1,7 +1,7 @@
 ﻿:root {
   --bg: #f5efe4;
   --bg-soft: rgba(255, 255, 255, 0.297); 
-  --surface: rgba(193, 190, 186, 0.877);
+  --surface: rgba(208, 204, 200, 0.877);
   --surface-strong: #331515;
   --text: #1f2a23;
   --muted: #5f6d64;
@@ -203,7 +203,7 @@ a {
   gap: 8px;
   padding: 8px 14px;
   border-radius: 999px;
-  background: rgba(193, 190, 186, 0.877);
+  background: rgba(218, 214, 211, 0.877);
   color: var(--success);
   font-weight: 700;
   letter-spacing: 0.04em;
