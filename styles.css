@@ -266,7 +266,7 @@ h1 {
 }
 
 .button-primary {
-  background: linear-gradient(135deg, var(--accent), #8b3e18);
+  background: linear-gradient(135deg, var(--accent), #3b302a);
   color: #fff;
   box-shadow: 0 14px 28px rgba(139, 62, 24, 0.24);
 }
