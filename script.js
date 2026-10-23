@@ -132,7 +132,6 @@
     '.footer-copy h2',
     '.footer-copy p:nth-of-type(2)',
     '.footer-copy p:nth-of-type(3)',
-    '.footer-copy p:nth-of-type(4) a',
   ];
   const placeholderSelectors = [
     'input[name="name"]',
@@ -265,7 +264,6 @@
         '.footer-copy h2': 'Leave a request for a pilot launch',
         '.footer-copy p:nth-of-type(2)': 'Email:  dogchain.pet@gmail.com',
         '.footer-copy p:nth-of-type(3)': 'Phone:  +375297808374',
-        '.footer-copy p:nth-of-type(4) a': 'Download the startup document',
       },
       placeholders: {
         'input[name="name"]': 'Your name',
